@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATPOWER-PIP API</title>
+</head>
+<body>
+    <h1>MATPOWER-PIP API</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload File">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    {% if filename %}
+        <form action="/run_power_flow" method="post">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <input type="submit" value="Run Power Flow">
+        </form>
+    {% endif %}
+    {% if power_flow_result %}
+        <h2>Power Flow Result</h2>
+        <p>{{ power_flow_result }}</p>
+    {% endif %}
+</body>
+</html>
