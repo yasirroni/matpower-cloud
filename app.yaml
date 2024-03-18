@@ -1,0 +1,19 @@
+runtime: python39  # Specify the Python runtime
+entrypoint: gunicorn -b :$PORT main:app  # Define the entrypoint for the app
+
+env_variables:
+  # Add any environment variables your Flask app may need
+
+# Add any other configuration settings your Flask app requires
+
+# Specify the list of system packages needed
+# This includes packages required by Octave and its dependencies
+# Note: Google App Engine Standard environment has limitations on what packages you can install
+# Make sure the packages are supported and won't exceed the deployment size limit
+# You might need to test this configuration to ensure it works within the constraints of App Engine
+runtime_config:
+  apt:
+    packages:
+      - octave
+
+# Include any other files or configurations needed for your Flask app
