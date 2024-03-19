@@ -2,9 +2,7 @@
     "name": "matpower-cloud",
     "version": "0.0.1",
     "description": "Run matpower on cloud",
-    "scripts": {
-        // "install": "apt-get -qq install octave octave-signal liboctave-dev"
-    },
+    "scripts": {},
     "dependencies": {},
     "devDependencies": {}
 }
