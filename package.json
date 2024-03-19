@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Run matpower on cloud",
     "scripts": {
-        "install": "apt-get -qq install octave octave-signal liboctave-dev"
+        // "install": "apt-get -qq install octave octave-signal liboctave-dev"
     },
     "dependencies": {},
     "devDependencies": {}
